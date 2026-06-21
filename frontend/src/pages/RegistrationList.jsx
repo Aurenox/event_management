@@ -58,8 +58,7 @@ function RegistrationList() {
 
             <Navbar color="danger" />
 
-            <div className="container mt-4">
-
+            <div className="container mt-4 mb-5 pb-5">
                 <h2 className="text-dark mb-4">
                     Registration List
                 </h2>
