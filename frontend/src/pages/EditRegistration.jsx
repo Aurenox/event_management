@@ -35,7 +35,7 @@ function EditRegistration() {
 
         event.preventDefault();
 
-        fetch(`http://localhost:3000/Registration/${id}`, {
+        fetch(`${API_URL}/Registration/${id}`, {
 
             method: "PUT",
 

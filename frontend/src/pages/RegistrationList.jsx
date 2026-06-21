@@ -16,6 +16,8 @@ function RegistrationList() {
 
     function loadRegistrations() {
 
+        console.log("API_URL =", API_URL);
+        console.log("FETCH URL =", `${API_URL}/Registration`);
         fetch(`${API_URL}/Registration`)
             .then(response => response.json())
             .then(data => {
@@ -29,13 +31,13 @@ function RegistrationList() {
         fetch(`${API_URL}/Registration/${deleteId}`, {
             method: "DELETE"
         })
-        .then(() => {
+            .then(() => {
 
-            setDeleteId(null);
+                setDeleteId(null);
 
-            loadRegistrations();
+                loadRegistrations();
 
-        });
+            });
 
     }
 
