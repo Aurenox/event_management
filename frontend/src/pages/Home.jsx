@@ -8,7 +8,7 @@ function Home() {
     <>
       <Navbar />
 
-      <div className="container-fluid mt-5 mb-5 pb-5">
+      <div className="container-fluid mt-5 ">
 
         <div className="text-center">
 
@@ -41,7 +41,7 @@ function Home() {
 
         </div>
 
-        <div className="row mt-4">
+        <div className="row mt-4 mb-5 pb-5">
 
           <div className="col-md-4">
             <div className="card p-3">
