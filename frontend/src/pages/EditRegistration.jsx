@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function EditRegistration() {
 
@@ -17,7 +18,7 @@ function EditRegistration() {
 
     useEffect(() => {
 
-        fetch(`http://localhost:3000/Registration/${id}`)
+        fetch(`${API_URL}/Registration/${id}`)
         .then(response => response.json())
         .then(data => {
 

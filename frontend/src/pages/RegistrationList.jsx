@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+const API_URL = import.meta.env.VITE_API_URL;
 function RegistrationList() {
 
     const [registrations, setRegistrations] = useState([]);
@@ -16,7 +16,7 @@ function RegistrationList() {
 
     function loadRegistrations() {
 
-        fetch("http://localhost:3000/Registration")
+        fetch(`${API_URL}/Registration`)
             .then(response => response.json())
             .then(data => {
                 setRegistrations(data);
@@ -26,7 +26,7 @@ function RegistrationList() {
 
     function deleteRegistration() {
 
-        fetch(`http://localhost:3000/Registration/${deleteId}`, {
+        fetch(`${API_URL}/Registration/${deleteId}`, {
             method: "DELETE"
         })
         .then(() => {

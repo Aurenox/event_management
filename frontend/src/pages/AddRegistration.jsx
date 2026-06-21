@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function AddRegistration() {
 
@@ -16,7 +17,7 @@ function AddRegistration() {
 
         event.preventDefault();
 
-        fetch("http://localhost:3000/Registration", {
+        fetch(`${API_URL}/Registration`, {
 
             method: "POST",
 
